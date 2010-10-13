@@ -1,0 +1,1926 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="vi">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Báo điện tử</title>
+<meta name="generator" content="WYSIWYG Web Builder - http://www.wysiwygwebbuilder.com">
+<style type="text/css">
+body
+{
+   background-color: #969696;
+   color: #000000;
+}
+</style>
+<link rel="stylesheet" href="./start/jquery.ui.all.css" type="text/css">
+<style type="text/css">
+a.style1:link
+{
+   color: #0000FF;
+   text-decoration: none;
+}
+a.style1:visited
+{
+   color: #800080;
+   text-decoration: underline;
+}
+a.style1:active
+{
+   color: #FF0000;
+   text-decoration: underline;
+}
+a.style1:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a.style2:link
+{
+   color: #FF0000;
+}
+a.style2:visited
+{
+   color: #800080;
+   text-decoration: underline;
+}
+a.style2:active
+{
+   color: #FF0000;
+   text-decoration: underline;
+}
+a.style2:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a.style3:link
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.style3:visited
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.style3:active
+{
+   color: #FF0000;
+   text-decoration: none;
+}
+a.style3:hover
+{
+   color: #FFFF00;
+   text-decoration: none;
+}
+a.style4:link
+{
+   color: #0000FF;
+   text-decoration: none;
+}
+a.style4:visited
+{
+   color: #0000FF;
+   text-decoration: none;
+}
+a.style4:active
+{
+   color: #FF0000;
+   text-decoration: underline;
+}
+a.style4:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+</style>
+<script type="text/javascript" src="./javascripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="./javascripts/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="./javascripts/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="./javascripts/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="./javascripts/jquery.ui.sortable.min.js"></script>
+<script type="text/javascript" src="./javascripts/jquery.ui.tabs.min.js"></script>
+<script type="text/javascript" src="./javascripts/jquery.ui.button.min.js"></script>
+<style type="text/css">
+.ui-tabs
+{
+   padding: 4px 4px 4px 4px;
+}
+.ui-tabs .ui-tabs-nav
+{
+   font-family: Arial;
+   font-size: 13px;
+   padding: 4px 4px 0px 4px;
+}
+.ui-tabs .ui-tabs-nav li
+{
+   font-weight: normal;
+   margin: 0px 2px -1px 0px;
+}
+.ui-tabs .ui-tabs-nav li a
+{
+   padding: 2px 7px 2px 7px;
+}
+</style>
+<style type="text/css">
+#TabMenu1
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu1 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu1 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu1 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu1 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu1 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu1 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu1 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu1 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu2
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu2 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu2 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu2 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu2 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu2 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu2 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu2 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu2 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu3
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 9.3px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu3 ul
+{
+   margin: 0;
+   padding: 0px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu3 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu3 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu3 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu3 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu3 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu3 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu3 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu5
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu5 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu5 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu5 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu5 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu5 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu5 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu5 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu5 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu6
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu6 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu6 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu6 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu6 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu6 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu6 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu6 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu6 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu7
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu7 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu7 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu7 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu7 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu7 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu7 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu7 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu7 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu8
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu8 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu8 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu8 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu8 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu8 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu8 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu8 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu8 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu9
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu9 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu9 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu9 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu9 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu9 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu9 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu9 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu9 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu10
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu10 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu10 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu10 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu10 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu10 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu10 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu10 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu10 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu11
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 9.3px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu11 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu11 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu11 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu11 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu11 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu11 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu11 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu11 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu12
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu12 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu12 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu12 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu12 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu12 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu12 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu12 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu12 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu13
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu13 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu13 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu13 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu13 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu13 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu13 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu13 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu13 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+#TabMenu4
+{
+   float: left;
+   width: 100%;
+   font-family: Tahoma;
+   font-size: 11px;
+   line-height: normal;
+   border-bottom: 1px solid #B0BEC7;
+}
+#TabMenu4 ul
+{
+   margin: 0;
+   padding: 10px 0px 3px 10px;
+   list-style: none;
+}
+#TabMenu4 li
+{
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+#TabMenu4 a
+{
+   float: left;
+   background: url("images/style22left.gif") no-repeat left top;
+   margin: 0;
+   padding: 0 0 0 4px;
+   text-decoration: none;
+}
+#TabMenu4 a span
+{
+   float: none;
+   display: block;
+   background: url("images/style22right.gif") no-repeat right top;
+   padding: 5px 15px 4px 6px;
+   color: #4569BB;
+   font-weight: normal;
+   text-decoration: none;
+}
+#TabMenu4 a:hover span
+{
+   background-position: 100% -42px;
+   color: #4569BB;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: underline;
+}
+#TabMenu4 a:hover
+{
+   background-position: 0% -42px;
+}
+#TabMenu4 #active a
+{
+   background-position: 0% -84px;
+}
+#TabMenu4 #active a span
+{
+   background-position: 100% -84px;
+   color: #CC6633;
+   font-weight: bold;
+   text-decoration: none;
+}
+</style>
+<style type="text/css">
+.ui-button
+{
+   font-family: Arial;
+   font-size: 11px;
+   font-weight: normal;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function()
+{
+   var jQueryTabs1Opts =
+   {
+      event: 'mouseover',
+      deselectable: 'false'
+   };
+   $("#jQueryTabs1").tabs(jQueryTabs1Opts);
+   $("#jQueryButton1").button();
+});
+</script>
+</head>
+<body>
+<div id="Layer16" style="position:absolute;background-color:#FFFFFF;left:99px;top:1px;width:1059px;height:2798px;z-index:63" title="layer_backgr">
+<table style="position:absolute;left:1px;top:378px;width:585px;height:203px;z-index:0;background-color:#FFFFFF;" cellpadding="0" cellspacing="1" id="Table2">
+<tr>
+<td align="left" valign="top" style="width:193px;height:140px;">&nbsp;
+</td>
+<td align="left" valign="top" style="width:193px;height:140px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:140px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" style="width:193px;height:60px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Nhip song Ha Noi qua lang kinh nguoi nuoc ngoai </a></b></font></td>
+<td align="left" valign="top" style="width:193px;height:60px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">&quot;Ky nghe&quot; lua son nua vao nha chua</a></b></font></td>
+<td align="left" valign="top" style="height:60px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">&quot;Rung&quot; nhan sac hoi tu tai le hoi ao dai 3 mien</a></b></font></td>
+</tr>
+</table>
+<table style="position:absolute;left:796px;top:196px;width:256px;height:406px;z-index:1;background-color:#FFFFFF;" cellpadding="0" cellspacing="1" id="Table4">
+<tr>
+<td align="left" valign="top" style="height:134px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" style="height:134px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" style="height:134px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:598px;top:163px;width:194px;height:436px;z-index:2;border:2px #C0C0C0 solid;background-color:#FFFFFF;" cellpadding="0" cellspacing="0" id="Table3">
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:40px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Mat vo vi thong gia dau khau trong le dam ngo</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:50px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Trang phuc thi Miss World cua Kieu Khanh se con bat ngo</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:43px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Phat hien xuong ham ca sau khong lo</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:40px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Cuoc doi ngeo kho cua con trai cong tu Bac Lieu</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:40px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Van Quyen het co hoi du AFF Cup 2010</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:40px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Kim thu tu choi vai dien trong &quot;Canh dong bat tan&quot;</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:40px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Nga thu nghiem xong tau hat nhan moi</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:37px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Nguoi Trung Quoc phat sot vi iPhone 4</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:40px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Truc vot oto chim theo pha tren song Hau</a></b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:42px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Truc vot oto chim theo pha tren song Hau</a></b></font></td>
+</tr>
+</table>
+<table style="position:absolute;left:1px;top:163px;width:589px;height:208px;z-index:3;background-color:#FFFFFF;" cellpadding="0" cellspacing="1" id="Table1">
+<tr>
+<td align="left" valign="top" style="width:280px;height:206px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:206px;">
+<font style="font-size:19px" color="#FF0000" face="Arial"><b><u><a href="xahoi-nd01.html" class="style2">Dai lo dai nhat Viet Nam truoc ngay thong xe</a></u></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Dai lo Thang Long (truc Lang - Hoa Lac truoc day) dep huyen ao khi anh mat troi dan tan, mac du mot so doan con bui, thieu dien, nhung day van la tuyen giao thong quy mo, hien dai hang dau Viet Nam.</font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+</font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">&gt; Ngay 29/9 thong xe dai lo dai nhat Viet Nam </a>/ <a href="#">Khanh thanh cau Vinh Tuy giam un tac giao thong</a></font></td>
+</tr>
+</table>
+<div id="wb_Image10" style="margin:0;padding:0;position:absolute;left:802px;top:201px;width:245px;height:124px;text-align:left;z-index:4;">
+<img src="images/box_vnf.jpg" id="Image10" alt="" border="0" style="width:245px;height:124px;"></div>
+<div id="wb_Image11" style="margin:0;padding:0;position:absolute;left:604px;top:1474px;width:448px;height:271px;text-align:left;z-index:5;">
+<img src="images/showcase2.jpg" id="Image11" alt="" border="0" style="width:448px;height:271px;"></div>
+<div id="wb_Image12" style="margin:0;padding:0;position:absolute;left:805px;top:332px;width:241px;height:128px;text-align:left;z-index:6;">
+<img src="images/showcase3.jpg" id="Image12" alt="" border="0" style="width:241px;height:128px;"></div>
+<div id="wb_Image13" style="margin:0;padding:0;position:absolute;left:803px;top:465px;width:246px;height:127px;text-align:left;z-index:7;">
+<img src="images/anh02-1.jpg" id="Image13" alt="" border="0" style="width:246px;height:127px;"></div>
+<div id="wb_Image15" style="margin:0;padding:0;position:absolute;left:607px;top:1750px;width:445px;height:340px;text-align:left;z-index:8;">
+<img src="images/ytuongxanh_2.jpg" id="Image15" alt="" border="0" style="width:445px;height:340px;"></div>
+<table style="position:absolute;left:604px;top:1257px;width:276px;height:212px;z-index:9;border:2px #C0C0C0 solid;" cellpadding="0" cellspacing="0" id="Table33">
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:206px;">
+<font style="font-size:12px" color="#FF0000" face="Arial"><b>Rao vặt<br>
+</b></font><font style="font-size:11px" color="#000000" face="Arial">*Cong ty A can tuyen dung nhan su<br>
+*Cong ty FFF giam gia 50% cho tat ca cac mat hang<br>
+*Can ban nha 100m2&nbsp; tai quan Thu Duc<br>
+*Cho thue phong tro gia re tai truong DH KHTN<br>
+*Cac loai Laptop IBM, Dell ... giam gia 10%<br>
+</font><font style="font-size:11px" color="#000000" face="Arial">*Cong ty A can tuyen dung nhan su<br>
+*Cong ty FFF giam gia 50% cho tat ca cac mat hang<br>
+*Can ban nha 100m2&nbsp; tai quan Thu Duc<br>
+*Cho thue phong tro gia re tai truong DH KHTN<br>
+*Cac loai Laptop IBM, Dell ... giam gia 10%<br>
+*Cong ty A can tuyen dung nhan su<br>
+*Cong ty FFF giam gia 50% cho tat ca cac mat hang<br>
+*Can ban nha 100m2&nbsp; tai quan Thu Duc</font></td>
+</tr>
+</table>
+<div id="wb_Image17" style="margin:0;padding:0;position:absolute;left:778px;top:834px;width:266px;height:233px;text-align:left;z-index:10;">
+<img src="images/TM01.jpg" id="Image17" alt="" border="0" style="width:266px;height:233px;"></div>
+<table style="position:absolute;left:2px;top:2509px;width:273px;height:124px;z-index:11;" cellpadding="0" cellspacing="1" id="Table31">
+<tr>
+<td align="left" valign="top" colspan="2" style="height:122px;">
+<font style="font-size:11px" color="#000000" face="Arial"><br>
+ </font><font style="font-size:13px" color="#000000" face="Arial"><b>Phat hien xuong ham ca sau khong lo</b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+</table>
+<input type="text" id="Editbox1" style="position:absolute;left:802px;top:166px;width:190px;height:18px;border:2px #C0C0C0 solid;font-family:Arial;font-size:13px;z-index:12" name="Editbox1" value="">
+<input type="image" name="ImageButton2" id="ImageButton2" src="images/1933-44340.png" style="position:absolute;left:959px;top:160px;width:38px;height:36px;z-index:13">
+<input type="button" id="jQueryButton1" name="" value="Search" style="position:absolute;left:998px;top:167px;width:53px;height:23px;color:#FFFFFF;font-family:Arial;font-size:11px;z-index:14">
+<table style="position:absolute;left:600px;top:608px;width:287px;height:224px;z-index:15;border:1px #C0C0C0 solid;" cellpadding="0" cellspacing="0" id="Table5">
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;width:136px;height:220px;">
+<font style="font-size:13px" color="#FF0000" face="Arial"><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Thời tiết<br>
+<br>
+<br>
+</b></font><font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </font><font style="font-size:32px" color="#0000FF" face="Arial"><b>29<sup>o</sup>C</b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+</font><font style="font-size:13px" color="#000000" face="Arial"><b>Không mưa</b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+Độ ẩm 74%<br>
+Gió Đông Bắc <br>
+tốc độ 1m/s</font></td>
+<td align="left" valign="top" colspan="2" style="border:1px #C0C0C0 solid;height:220px;">
+<font style="font-size:13px" color="#FF0000" face="Arial"><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Giá vàng</b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ĐVT: tr.đ/lượng<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+(Nguồn: </font><font style="font-size:12px" color="#0000FF" face="Arial"><b>Sacombank.SBJ</b></font><font style="font-size:11px" color="#000000" face="Arial">)<br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </font><font style="font-size:13px" color="#FF0000" face="Arial"><b>Tỷ giá<br>
+<br>
+<br>
+<br>
+</b></font><font style="font-size:8px" color="#FF0000" face="Arial"><br>
+</font><font style="font-size:11px" color="#000000" face="Arial">(Nguồn:</font><font style="font-size:12px" color="#0000FF" face="Arial"><b> Eximbank</b></font><font style="font-size:11px" color="#000000" face="Arial">)</font></td>
+</tr>
+</table>
+<div style="position:absolute;left:610px;top:633px;width:97px;height:20px;border:1px #C0C0C0 solid;z-index:16">
+<select name="Combobox1" size="1" id="Combobox1" style="position:absolute;	left:0px;top:0px;width:100%;height:100%;border-width:0px;font-family:Arial;font-size:13px;">
+<option selected>Ha Noi</option>
+<option>TP HCM</option>
+<option>Hai Phong</option>
+<option>Da Nang</option>
+</select>
+</div>
+<div id="wb_Image14" style="margin:0;padding:0;position:absolute;left:610px;top:661px;width:36px;height:35px;text-align:left;z-index:17;">
+<img src="images/i_nhieumay.gif" id="Image14" alt="" border="0" style="width:36px;height:35px;"></div>
+<div id="wb_Image35" style="margin:0;padding:0;position:absolute;left:606px;top:610px;width:24px;height:18px;text-align:left;z-index:18;">
+<img src="images/cloud.gif" id="Image35" alt="" border="0" style="width:24px;height:18px;"></div>
+<div id="wb_Image36" style="margin:0;padding:0;position:absolute;left:750px;top:611px;width:14px;height:18px;text-align:left;z-index:19;">
+<img src="images/money.gif" id="Image36" alt="" border="0" style="width:14px;height:18px;"></div>
+<table style="position:absolute;left:744px;top:642px;width:139px;height:62px;z-index:20;border:1px #C0C0C0 solid;background-color:#FFFFE0;" cellpadding="0" cellspacing="0" id="Table6">
+<tr>
+<td align="center" valign="top" style="border:1px #C0C0C0 solid;width:43px;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">Loai</font></td>
+<td align="center" valign="top" style="border:1px #C0C0C0 solid;width:44px;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">Mua</font></td>
+<td align="center" valign="top" style="border:1px #C0C0C0 solid;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">Ban</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;width:43px;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">SBJ</font></td>
+<td align="right" valign="top" style="border:1px #C0C0C0 solid;width:44px;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">31,260</font></td>
+<td align="right" valign="top" style="border:1px #C0C0C0 solid;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">31,280</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;width:43px;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">SJC</font></td>
+<td align="right" valign="top" style="border:1px #C0C0C0 solid;width:44px;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">31,240</font></td>
+<td align="right" valign="top" style="border:1px #C0C0C0 solid;height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">31,290</font></td>
+</tr>
+</table>
+<div id="wb_Image37" style="margin:0;padding:0;position:absolute;left:747px;top:725px;width:17px;height:16px;text-align:left;z-index:21;">
+<img src="images/circle-chart.gif" id="Image37" alt="" border="0" style="width:17px;height:16px;"></div>
+<textarea name="TextArea1" id="TextArea1" style="position:absolute;left:746px;top:744px;width:132px;height:52px;border:1px #C0C0C0 solid;font-family:Arial;font-size:13px;z-index:22" rows="2" cols="16" readonly="readonly">USD      19.500
+GBP      30.402
+HKD        2.525
+FRF                -
+CHF      19.522
+DEM               -
+JPY       229.19
+AUD      18.535
+CAD      19.071
+SGD      14.682
+EUR       25.674
+NZD       14.305</textarea>
+<table style="position:absolute;left:600px;top:835px;width:166px;height:232px;z-index:23;border:1px #C0C0C0 solid;" cellpadding="0" cellspacing="0" id="Table35">
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:21px;">
+<font style="font-size:13px" color="#FF0000" face="Arial"><b>Thăm dò ý kiến</b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" bgcolor="#AFEEEE" style="border:1px #C0C0C0 solid;height:172px;">
+<font style="font-size:12px" color="#666666" face="Arial"><b>Lam phat 2010 cua Viet Nam se o muc:<br>
+<br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Duoi 8%<br>
+<br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 8-10%<br>
+<br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 10-12%<br>
+<br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Tren 12%</b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="border:1px #C0C0C0 solid;height:31px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </font><font style="font-size:12px" color="#0000FF" face="Arial"><a href="#">Xem ket qua</a></font></td>
+</tr>
+</table>
+<input type="radio" id="RadioButton1" name="RadioButton2" value="on" style="position:absolute;left:616px;top:902px;z-index:24">
+<input type="radio" id="RadioButton2" name="RadioButton2" value="on" style="position:absolute;left:616px;top:932px;z-index:25">
+<input type="radio" id="RadioButton3" name="RadioButton2" value="on" style="position:absolute;left:616px;top:962px;z-index:26">
+<input type="radio" id="RadioButton4" name="RadioButton2" value="on" style="position:absolute;left:616px;top:993px;z-index:27">
+<input type="submit" id="Button1" name="" value="Biểu quyết" style="position:absolute;left:608px;top:1036px;width:79px;height:25px;font-family:Arial;font-size:13px;z-index:28">
+<div id="wb_Image9" style="margin:0;padding:0;position:absolute;left:603px;top:1073px;width:450px;height:178px;text-align:left;z-index:29;">
+<img src="images/anh1-5.jpg" id="Image9" alt="" border="0" style="width:450px;height:178px;"></div>
+<div id="wb_Image16" style="margin:0;padding:0;position:absolute;left:604px;top:2094px;width:443px;height:309px;text-align:left;z-index:30;">
+<img src="images/KM2%20%282%29.jpg" id="Image16" alt="" border="0" style="width:443px;height:309px;"></div>
+</div>
+<table style="position:absolute;left:102px;top:583px;width:595px;height:2068px;z-index:64;" cellpadding="0" cellspacing="1" id="Table7">
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:158px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" style="width:296px;height:158px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:158px;">&nbsp;
+</td>
+</tr>
+</table>
+<div id="Layer2" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:750px;width:592px;height:155px;z-index:65" title="Xa hoi">
+<div id="wb_Image7" style="margin:0;padding:0;position:absolute;left:5px;top:25px;width:130px;height:100px;text-align:left;z-index:31;">
+<img src="images/n12.jpg" id="Image7" alt="" border="0" style="width:130px;height:100px;"></div>
+<div id="wb_Image8" style="margin:0;padding:0;position:absolute;left:365px;top:29px;width:53px;height:53px;text-align:left;z-index:32;">
+<img src="images/l.jpg" id="Image8" alt="" border="0" style="width:53px;height:53px;"></div>
+</div>
+<img src="images/img0012.jpg" id="Banner1" alt="BaoDienTu.Com" style="position:absolute;left:100px;top:3px;width:1057px;height:103px;border-width:0;z-index:66">
+<hr id="Line1" style="color:#000000;background-color:#000000;border:0px;margin:0;padding:0;position:absolute;left:100px;top:105px;width:1057px;height:4px;z-index:67">
+<div id="jQueryTabs1" style="position:absolute;left:99px;top:108px;width:1046px;height:46px;z-index:68">
+<ul>
+<li><a href="#page-0" onClick="link_trangchu();"><span>Trang nhất</span></a></li>
+<li><a href="#page-1" onClick="link_xahoi();"><span>Xã hội</span></a></li>
+<li><a href="#page-2"><span>Thế giới</span></a></li>
+<li><a href="#page-3"><span>Kinh doanh</span></a></li>
+<li><a href="#page-4"><span>Văn hóa</span></a></li>
+<li><a href="#page-5"><span>Thể thao</span></a></li>
+<li><a href="#page-6"><span>Pháp luật</span></a></li>
+<li><a href="#page-7"><span>Đời sống</span></a></li>
+<li><a href="#page-8"><span>Khoa học</span></a></li>
+<li><a href="#page-9"><span>Vi tính</span></a></li>
+<li><a href="#page-10"><span>Ôtô-Xe máy</span></a></li>
+<li><a href="#page-11"><span>Bạn đọc viết</span></a></li>
+<li><a href="#page-12"><span>Tâm sự</span></a></li>
+<li><a href="#page-13"><span>Rao vặt</span></a></li>
+<li><a href="#page-14"><span>Cười</span></a></li>
+</ul>
+<script language="javascript" type="text/javascript">
+function link_xahoi()
+{
+location.href="xahoi.html";
+}
+function link_trangchu()
+{
+location.href="index.html";
+}
+</script>
+<div style="height:6px;overflow:auto" id="page-0">
+<div id="wb_TextMenu4" style="margin:0;padding:0;position:absolute;left:6px;top:34px;width:395px;height:16px;text-align:center;z-index:33;">
+<font style="font-size:11px;" color="#000000" face="Arial">
+   <a href="" class="style4">Liên hệ tòa soạn</a>   &nbsp;   <a href="" class="style4"> Số hóa</a>   &nbsp;   <a href="" class="style4">Game thủ</a>   &nbsp;   <a href="" class="style4">Việc làm</a>   </font></div>
+</div>
+<div style="height:6px;overflow:auto" id="page-1">
+<div id="wb_TextMenu2" style="margin:0;padding:0;position:absolute;left:18px;top:33px;width:368px;height:16px;text-align:center;z-index:34;">
+<font style="font-size:11px;" color="#FFFF00" face="Arial">
+<a href="" class="style4">Giáo dục</a>      &nbsp;<a href="" class="style4">Nhịp điệu trẻ</a>      &nbsp;<a href="" class="style4">Du lịch</a>      &nbsp;<a href="" class="style4">Du học</a>      &nbsp;<a href="" class="style4">Tuyển sinh</a>      </font></div>
+</div>
+<div style="height:6px;overflow:auto" id="page-2">
+<div id="wb_TextMenu5" style="margin:0;padding:0;position:absolute;left:7px;top:33px;width:494px;height:16px;text-align:center;z-index:35;">
+<font style="font-size:11px;" color="#000000" face="Arial">
+   <a href="" class="style4">Cuộc sống đó đây</a>   &nbsp;   <a href="" class="style4">Ảnh</a>   &nbsp;   <a href="" class="style4">Người Việt 5 châu</a>   &nbsp;   <a href="" class="style4">Phân tích</a>   &nbsp;   <a href="" class="style4">Tư liệu</a>   </font></div>
+</div>
+<div style="height:6px;overflow:auto" id="page-3">
+<div id="wb_TextMenu6" style="margin:0;padding:0;position:absolute;left:50px;top:34px;width:606px;height:16px;text-align:center;z-index:36;">
+<font style="font-size:11px;" color="#000000" face="Arial">
+   <a href="" class="style4">Ebank</a>   &nbsp;   <a href="" class="style4">Chứng khoáng</a>   &nbsp;   <a href="" class="style4">Bất động sản</a>   &nbsp;   <a href="" class="style4">Nhà đẹp</a>   &nbsp;   <a href="" class="style4">Doanh nhân</a>   &nbsp;   <a href="" class="style4">Quốc tế</a>   &nbsp;   <a href="" class="style4">Mua sắm</a>   &nbsp;   <a href="" class="style4">Doanh nghiệp viết</a>   </font></div>
+</div>
+<div style="height:6px;overflow:auto" id="page-4">
+</div>
+<div style="height:6px;overflow:auto" id="page-5">
+</div>
+<div style="height:6px;overflow:auto" id="page-6">
+</div>
+<div style="height:6px;overflow:auto" id="page-7">
+</div>
+<div style="height:6px;overflow:auto" id="page-8">
+</div>
+<div style="height:6px;overflow:auto" id="page-9">
+</div>
+<div style="height:6px;overflow:auto" id="page-10">
+</div>
+<div style="height:6px;overflow:auto" id="page-11">
+</div>
+<div style="height:6px;overflow:auto" id="page-12">
+</div>
+<div style="height:6px;overflow:auto" id="page-13">
+</div>
+<div style="height:6px;overflow:auto" id="page-14">
+</div>
+</div>
+<div id="Layer1" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:99px;top:593px;width:593px;height:154px;z-index:69" title="Xa hoi">
+<div id="wb_Image5" style="margin:0;padding:0;position:absolute;left:5px;top:29px;width:130px;height:100px;text-align:left;z-index:37;">
+<img src="images/set.jpg" id="Image5" alt="" border="0" style="width:130px;height:100px;"></div>
+<div id="wb_Image6" style="margin:0;padding:0;position:absolute;left:364px;top:29px;width:53px;height:53px;text-align:left;z-index:38;">
+<img src="images/truc-vot-pha-6-nho-3.jpg" id="Image6" alt="" border="0" style="width:53px;height:53px;"></div>
+<table style="position:absolute;left:361px;top:20px;width:221px;height:133px;z-index:39;" cellpadding="0" cellspacing="1" id="Table9">
+<tr>
+<td align="left" valign="top" style="width:70px;height:64px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:64px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:66px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<br>
+</font></td>
+</tr>
+</table>
+</div>
+<div id="wb_TabMenu1" style="margin:0;padding:0;position:absolute;left:99px;top:583px;width:593px;height:32px;text-align:left;z-index:70;">
+<div id="TabMenu1">
+<ul>
+<li><a href="#"><span>Xã hội</span></a></li>
+<li><a href="#"><span>Giáo dục</span></a></li>
+<li><a href="#"><span>Nhịp điệu trẻ</span></a></li>
+<li><a href="#"><span>Du lịch</span></a></li>
+<li><a href="#"><span>Du học</span></a></li>
+<li><a href="#"><span>Tuyển sinh</span></a></li>
+</ul>
+</div></div>
+<div id="wb_TabMenu2" style="margin:0;padding:0;position:absolute;left:99px;top:740px;width:593px;height:32px;text-align:left;z-index:71;">
+<div id="TabMenu2">
+<ul>
+<li><a href="#"><span>Thế giới</span></a></li>
+<li><a href="#"><span>Cuộc sống đó đây</span></a></li>
+<li><a href="#"><span>Ảnh</span></a></li>
+<li><a href="#"><span>Người Việt 5 châu</span></a></li>
+<li><a href="#"><span>Phân tích</span></a></li>
+<li><a href="#"><span>Tư liệu</span></a></li>
+</ul>
+</div></div>
+<div id="Layer3" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:908px;width:592px;height:155px;z-index:72" title="Kinh doanh">
+<table style="position:absolute;left:2px;top:19px;width:355px;height:135px;z-index:40;" cellpadding="0" cellspacing="1" id="Table12">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial"><a href="#">&gt;Tiem luc quan su cua Nga</a></font></td>
+</tr>
+</table>
+<table style="position:absolute;left:358px;top:19px;width:233px;height:135px;z-index:41;" cellpadding="0" cellspacing="1" id="Table13">
+<tr>
+<td align="left" valign="top" style="width:80px;height:66px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:66px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:66px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<div id="wb_Image18" style="margin:0;padding:0;position:absolute;left:2px;top:23px;width:130px;height:100px;text-align:left;z-index:42;">
+<img src="images/vang163set.jpg" id="Image18" alt="" border="0" style="width:130px;height:100px;"></div>
+<div id="wb_Image19" style="margin:0;padding:0;position:absolute;left:372px;top:30px;width:53px;height:53px;text-align:left;z-index:43;">
+<img src="images/truc-vot-pha-6-nho-3.jpg" id="Image19" alt="" border="0" style="width:53px;height:53px;"></div>
+</div>
+<div id="wb_TabMenu3" style="margin:0;padding:0;position:absolute;left:99px;top:908px;width:591px;height:32px;text-align:left;z-index:73;">
+<div id="TabMenu3">
+<ul>
+<li><a href="#"><span>Kinh doanh</span></a></li>
+<li><a href="#"><span>Ebank</span></a></li>
+<li><a href="#"><span>Chứng khoáng</span></a></li>
+<li><a href="#"><span>Bất động sản</span></a></li>
+<li><a href="#"><span>Nhà đẹp</span></a></li>
+<li><a href="#"><span>Doanh nhân</span></a></li>
+<li><a href="#"><span>Quốc tế</span></a></li>
+<li><a href="#"><span>Mua sắm</span></a></li>
+</ul>
+</div></div>
+<div id="Layer4" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:1066px;width:592px;height:155px;z-index:74" title="Van hoa">
+<div id="wb_Image20" style="margin:0;padding:0;position:absolute;left:374px;top:29px;width:53px;height:53px;text-align:left;z-index:44;">
+<img src="images/l.jpg" id="Image20" alt="" border="0" style="width:53px;height:53px;"></div>
+<div id="wb_Image27" style="margin:0;padding:0;position:absolute;left:3px;top:29px;width:130px;height:100px;text-align:left;z-index:45;">
+<img src="images/set.jpg" id="Image27" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="Layer5" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:1224px;width:592px;height:155px;z-index:75" title="Xa hoi">
+<div id="wb_Image21" style="margin:0;padding:0;position:absolute;left:372px;top:28px;width:53px;height:53px;text-align:left;z-index:46;">
+<img src="images/truc-vot-pha-6-nho-3.jpg" id="Image21" alt="" border="0" style="width:53px;height:53px;"></div>
+<div id="wb_Image28" style="margin:0;padding:0;position:absolute;left:4px;top:24px;width:130px;height:100px;text-align:left;z-index:47;">
+<img src="images/n12.jpg" id="Image28" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="wb_TabMenu5" style="margin:0;padding:0;position:absolute;left:99px;top:1214px;width:593px;height:32px;text-align:left;z-index:76;">
+<div id="TabMenu5">
+<ul>
+<li><a href="#"><span>Thể thao</span></a></li>
+<li><a href="#"><span>Bóng đá</span></a></li>
+<li><a href="#"><span>Tennis</span></a></li>
+<li><a href="#"><span>Chân dung</span></a></li>
+<li><a href="#"><span>Ảnh - Video</span></a></li>
+</ul>
+</div></div>
+<div id="Layer6" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:1382px;width:592px;height:155px;z-index:77" title="Phap luat">
+<div id="wb_Image22" style="margin:0;padding:0;position:absolute;left:374px;top:27px;width:53px;height:53px;text-align:left;z-index:48;">
+<img src="images/l.jpg" id="Image22" alt="" border="0" style="width:53px;height:53px;"></div>
+<div id="wb_Image29" style="margin:0;padding:0;position:absolute;left:1px;top:22px;width:130px;height:100px;text-align:left;z-index:49;">
+<img src="images/vang163set.jpg" id="Image29" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="wb_TabMenu6" style="margin:0;padding:0;position:absolute;left:99px;top:1372px;width:593px;height:32px;text-align:left;z-index:78;">
+<div id="TabMenu6">
+<ul>
+<li><a href="#"><span>Pháp luật</span></a></li>
+<li><a href="#"><span>Hình sự</span></a></li>
+<li><a href="#"><span>Ký sự</span></a></li>
+<li><a href="#"><span>Tư vấn</span></a></li>
+</ul>
+</div></div>
+<div id="Layer7" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:1540px;width:592px;height:155px;z-index:79" title="Doi song">
+<div id="wb_Image23" style="margin:0;padding:0;position:absolute;left:376px;top:29px;width:53px;height:53px;text-align:left;z-index:50;">
+<img src="images/truc-vot-pha-6-nho-3.jpg" id="Image23" alt="" border="0" style="width:53px;height:53px;"></div>
+<div id="wb_Image30" style="margin:0;padding:0;position:absolute;left:3px;top:35px;width:130px;height:100px;text-align:left;z-index:51;">
+<img src="images/set.jpg" id="Image30" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="wb_TabMenu7" style="margin:0;padding:0;position:absolute;left:99px;top:1530px;width:593px;height:32px;text-align:left;z-index:80;">
+<div id="TabMenu7">
+<ul>
+<li><a href="#"><span>Đời sống</span></a></li>
+<li><a href="#"><span>Gia đình</span></a></li>
+<li><a href="#"><span>Sức khỏe</span></a></li>
+<li><a href="#"><span>Ẩm thực</span></a></li>
+<li><a href="#"><span>Giới tính</span></a></li>
+<li><a href="#"><span>Làm đẹp</span></a></li>
+<li><a href="#"><span>Cửa sổ Blog</span></a></li>
+</ul>
+</div></div>
+<div id="Layer8" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:1698px;width:592px;height:155px;z-index:81" title="Khoa hoc">
+<div id="wb_Image24" style="margin:0;padding:0;position:absolute;left:378px;top:28px;width:53px;height:53px;text-align:left;z-index:52;">
+<img src="images/l.jpg" id="Image24" alt="" border="0" style="width:53px;height:53px;"></div>
+<div id="wb_Image31" style="margin:0;padding:0;position:absolute;left:4px;top:30px;width:130px;height:100px;text-align:left;z-index:53;">
+<img src="images/n12.jpg" id="Image31" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="wb_TabMenu8" style="margin:0;padding:0;position:absolute;left:99px;top:1688px;width:593px;height:32px;text-align:left;z-index:82;">
+<div id="TabMenu8">
+<ul>
+<li><a href="#"><span>Khoa học</span></a></li>
+<li><a href="#"><span>Môi trường</span></a></li>
+<li><a href="#"><span>Thiên nhiên</span></a></li>
+<li><a href="#"><span>Ảnh</span></a></li>
+<li><a href="#"><span>Công nghệ mới</span></a></li>
+</ul>
+</div></div>
+<div id="Layer9" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:1856px;width:592px;height:155px;z-index:83" title="Vi tinh">
+<div id="wb_Image25" style="margin:0;padding:0;position:absolute;left:376px;top:27px;width:53px;height:53px;text-align:left;z-index:54;">
+<img src="images/truc-vot-pha-6-nho-3.jpg" id="Image25" alt="" border="0" style="width:53px;height:53px;"></div>
+<div id="wb_Image32" style="margin:0;padding:0;position:absolute;left:1px;top:28px;width:130px;height:100px;text-align:left;z-index:55;">
+<img src="images/vang163set.jpg" id="Image32" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="wb_TabMenu9" style="margin:0;padding:0;position:absolute;left:99px;top:1846px;width:593px;height:32px;text-align:left;z-index:84;">
+<div id="TabMenu9">
+<ul>
+<li><a href="#"><span>Vi tính</span></a></li>
+<li><a href="#"><span>Sản phẩm mới</span></a></li>
+<li><a href="#"><span>Kinh nghiệm</span></a></li>
+<li><a href="#"><span>Giải trí</span></a></li>
+<li><a href="#"><span>Hỏi đáp</span></a></li>
+<li><a href="#"><span>Hacker & Virus</span></a></li>
+</ul>
+</div></div>
+<div id="Layer10" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:2014px;width:592px;height:155px;z-index:85" title="Oto - Xe may">
+<div id="wb_Image26" style="margin:0;padding:0;position:absolute;left:378px;top:26px;width:53px;height:53px;text-align:left;z-index:56;">
+<img src="images/l.jpg" id="Image26" alt="" border="0" style="width:53px;height:53px;"></div>
+<div id="wb_Image33" style="margin:0;padding:0;position:absolute;left:3px;top:36px;width:130px;height:100px;text-align:left;z-index:57;">
+<img src="images/set.jpg" id="Image33" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="wb_TabMenu10" style="margin:0;padding:0;position:absolute;left:99px;top:2004px;width:593px;height:32px;text-align:left;z-index:86;">
+<div id="TabMenu10">
+<ul>
+<li><a href="#"><span>Ôtô-Xe máy</span></a></li>
+<li><a href="#"><span>Tư vấn</span></a></li>
+</ul>
+</div></div>
+<div id="Layer11" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:2172px;width:592px;height:155px;z-index:87" title="Ban doc viet">
+<div id="wb_Image34" style="margin:0;padding:0;position:absolute;left:4px;top:31px;width:130px;height:100px;text-align:left;z-index:58;">
+<img src="images/n12.jpg" id="Image34" alt="" border="0" style="width:130px;height:100px;"></div>
+</div>
+<div id="wb_TabMenu11" style="margin:0;padding:0;position:absolute;left:99px;top:2162px;width:591px;height:32px;text-align:left;z-index:88;">
+<div id="TabMenu11">
+<ul>
+<li><a href="#"><span>Bạn đọc viết</span></a></li>
+<li><a href="#"><span>Thế giới</span></a></li>
+<li><a href="#"><span>Văn hóa</span></a></li>
+<li><a href="#"><span>Thể thao</span></a></li>
+<li><a href="#"><span>Kinh doanh</span></a></li>
+<li><a href="#"><span>Xã hội</span></a></li>
+<li><a href="#"><span>Pháp luật</span></a></li>
+<li><a href="#"><span>Đời sống</span></a></li>
+<li><a href="#"><span>Khoa học</span></a></li>
+</ul>
+</div></div>
+<div id="Layer12" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:2330px;width:592px;height:155px;z-index:89" title="Tam su">
+</div>
+<div id="wb_TabMenu12" style="margin:0;padding:0;position:absolute;left:99px;top:2320px;width:593px;height:32px;text-align:left;z-index:90;">
+<div id="TabMenu12">
+<ul>
+<li><a href="#"><span>Tâm sự</span></a></li>
+</ul>
+</div></div>
+<div id="Layer13" style="position:absolute;background-color:#FFFFE0;border:1px #C0C0C0 outset;left:100px;top:2488px;width:294px;height:155px;z-index:91" title="Cuoi">
+</div>
+<div id="wb_TabMenu13" style="margin:0;padding:0;position:absolute;left:99px;top:2478px;width:295px;height:32px;text-align:left;z-index:92;">
+<div id="TabMenu13">
+<ul>
+<li><a href="#"><span>Cười</span></a></li>
+</ul>
+</div></div>
+<div id="Layer14" style="position:absolute;background-color:#FFFFE0;border:1px #000000 outset;left:397px;top:2486px;width:294px;height:157px;z-index:93" title="Xa hoi">
+<table style="position:absolute;left:2px;top:3px;width:284px;height:152px;z-index:59;" cellpadding="0" cellspacing="1" id="Table34">
+<tr>
+<td align="left" valign="top" style="height:24px;">
+<font style="font-size:13px" color="#FF0000" face="Arial"><b>Lịch phát sóng truyền hình</b></font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="height:22px;">&nbsp;
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" style="height:102px;">&nbsp;
+</td>
+</tr>
+</table>
+<div style="position:absolute;left:5px;top:28px;width:277px;height:20px;border:1px #C0C0C0 solid;z-index:60">
+<select name="Combobox2" size="1" id="Combobox2" style="position:absolute;	left:0px;top:0px;width:100%;height:100%;border-width:0px;font-family:Arial;font-size:13px;">
+<option selected>VTV1</option>
+<option>VTV2</option>
+<option>VTV3</option>
+<option>VTV4</option>
+</select>
+</div>
+<textarea name="TextArea2" id="TextArea2" style="position:absolute;left:6px;top:54px;width:274px;height:93px;border:1px #C0C0C0 solid;font-family:Courier New;font-size:13px;z-index:61" rows="4" cols="30"></textarea>
+</div>
+<div id="wb_Image1" style="margin:0;padding:0;position:absolute;left:114px;top:173px;width:250px;height:195px;text-align:left;z-index:94;">
+<img src="images/255.jpg" id="Image1" alt="" border="0" style="width:250px;height:195px;"></div>
+<div id="wb_Image2" style="margin:0;padding:0;position:absolute;left:314px;top:391px;width:150px;height:117px;text-align:left;z-index:95;">
+<img src="images/Untitled-4.jpg.thumb150x0.ns.jpg" id="Image2" alt="" border="0" style="width:150px;height:117px;"></div>
+<div id="wb_Image3" style="margin:0;padding:0;position:absolute;left:113px;top:390px;width:150px;height:117px;text-align:left;z-index:96;">
+<img src="images/anh1.jpg.thumb150x0.ns.jpg" id="Image3" alt="" border="0" style="width:150px;height:117px;"></div>
+<div id="wb_Image4" style="margin:0;padding:0;position:absolute;left:522px;top:393px;width:150px;height:117px;text-align:left;z-index:97;">
+<img src="images/250.jpg.thumb150x0.ns.jpg" id="Image4" alt="" border="0" style="width:150px;height:117px;"></div>
+<table style="position:absolute;left:102px;top:617px;width:355px;height:134px;z-index:98;" cellpadding="0" cellspacing="1" id="Table8">
+<tr>
+<td align="left" valign="top" style="width:134px;height:105px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:105px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:26px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:103px;top:771px;width:355px;height:135px;z-index:99;" cellpadding="0" cellspacing="1" id="Table10">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial"><a href="#">&gt;Tiem luc quan su cua Nga</a></font></td>
+</tr>
+</table>
+<table style="position:absolute;left:459px;top:771px;width:233px;height:135px;z-index:100;" cellpadding="0" cellspacing="1" id="Table11">
+<tr>
+<td align="left" valign="top" style="width:80px;height:65px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:65px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:67px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:103px;top:1089px;width:355px;height:135px;z-index:101;" cellpadding="0" cellspacing="1" id="Table14">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:459px;top:1089px;width:234px;height:133px;z-index:102;" cellpadding="0" cellspacing="1" id="Table15">
+<tr>
+<td align="left" valign="top" style="width:84px;height:64px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:64px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:66px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:458px;top:1246px;width:235px;height:133px;z-index:103;" cellpadding="0" cellspacing="1" id="Table16">
+<tr>
+<td align="left" valign="top" style="width:84px;height:64px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:64px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:66px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:100px;top:1246px;width:355px;height:135px;z-index:104;" cellpadding="0" cellspacing="1" id="Table17">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:458px;top:1404px;width:235px;height:135px;z-index:105;" cellpadding="0" cellspacing="1" id="Table18">
+<tr>
+<td align="left" valign="top" style="width:84px;height:65px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:65px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:67px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:100px;top:1404px;width:355px;height:135px;z-index:106;" cellpadding="0" cellspacing="1" id="Table19">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:100px;top:1562px;width:355px;height:135px;z-index:107;" cellpadding="0" cellspacing="1" id="Table20">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:458px;top:1562px;width:235px;height:135px;z-index:108;" cellpadding="0" cellspacing="1" id="Table21">
+<tr>
+<td align="left" valign="top" style="width:84px;height:66px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:66px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:66px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:100px;top:1720px;width:355px;height:135px;z-index:109;" cellpadding="0" cellspacing="1" id="Table22">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:458px;top:1720px;width:235px;height:135px;z-index:110;" cellpadding="0" cellspacing="1" id="Table23">
+<tr>
+<td align="left" valign="top" style="width:84px;height:65px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:65px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:67px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:100px;top:1878px;width:355px;height:135px;z-index:111;" cellpadding="0" cellspacing="1" id="Table24">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:458px;top:1878px;width:235px;height:135px;z-index:112;" cellpadding="0" cellspacing="1" id="Table25">
+<tr>
+<td align="left" valign="top" style="width:84px;height:66px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:66px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:66px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:100px;top:2036px;width:355px;height:135px;z-index:113;" cellpadding="0" cellspacing="1" id="Table26">
+<tr>
+<td align="left" valign="top" style="width:134px;height:114px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:114px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:18px;">&nbsp;
+</td>
+</tr>
+</table>
+<table style="position:absolute;left:458px;top:2036px;width:235px;height:135px;z-index:114;" cellpadding="0" cellspacing="1" id="Table27">
+<tr>
+<td align="left" valign="top" style="width:84px;height:66px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:66px;">
+<font style="font-size:13px" color="#000000" face="Arial"><a href="#">Truc vot oto chim theo pha tren song Hau </a></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+ </font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:66px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; </font><font style="font-size:13px" color="#000000" face="Arial"><a href="#">*Gia bien so xe quan su de cho hang</a><br>
+<a href="#">&nbsp; *Bo Khoa hoc Cong nghe, Cong thuong co thu truong moi</a><br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:100px;top:2352px;width:355px;height:136px;z-index:115;" cellpadding="0" cellspacing="1" id="Table28">
+<tr>
+<td align="left" valign="top" colspan="2" style="height:134px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b>Phat hien xuong ham ca sau khong lo</b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo<br>
+</font></td>
+</tr>
+</table>
+<table style="position:absolute;left:458px;top:2352px;width:235px;height:136px;z-index:116;" cellpadding="0" cellspacing="1" id="Table29">
+<tr>
+<td align="left" valign="top" colspan="2" style="height:134px;">
+<font style="font-size:11px" color="#000000" face="Arial"><br>
+ </font></td>
+</tr>
+</table>
+<table style="position:absolute;left:101px;top:2193px;width:592px;height:135px;z-index:117;" cellpadding="0" cellspacing="1" id="Table30">
+<tr>
+<td align="left" valign="top" style="width:131px;height:106px;">&nbsp;
+</td>
+<td align="left" valign="top" style="height:106px;">
+<font style="font-size:13px" color="#000000" face="Arial"><b><a href="#" class="style1">Phat hien xuong ham ca sau khong lo</a></b></font><font style="font-size:11px" color="#000000" face="Arial"><br>
+<br>
+</font><font style="font-size:13px" color="#000000" face="Arial">Trong luc mo ca gan bo, mot dan chai khu vuc vam ABC (Ninh Kieu, Can Tho) vot duoc xuong ham tren ca sau khong lo</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" colspan="2" style="height:26px;">&nbsp;
+</td>
+</tr>
+</table>
+<input type="image" name="ImageButton1" id="ImageButton1" src="images/ui-bg_gloss-wave_45_e14f1c_500x100.png" style="position:absolute;left:100px;top:2673px;width:1057px;height:26px;z-index:118">
+<div id="wb_TextMenu1" style="margin:0;padding:0;position:absolute;left:138px;top:2679px;width:605px;height:17px;text-align:center;z-index:119;">
+<font style="font-size:12px;" color="#FFFFFF" face="Arial">
+|<a href="index.html" class="style3">   Trang chủ   </a>|&nbsp;|<a href="" class="style3">   Đặt làm trang chủ   </a>|&nbsp;|<a href="" class="style3">   Liên hệ tòa soạn   </a>|&nbsp;|<a href="" class="style3">   Liên hệ quảng cáo   </a>|&nbsp;|<a href="" class="style3">   Đường dây nóng   </a>|</font></div>
+<div id="Layer15" style="position:absolute;background-color:#FFE4E1;left:99px;top:2699px;width:1057px;height:23px;z-index:120" title="">
+<div id="wb_TextMenu3" style="margin:0;padding:0;position:absolute;left:35px;top:4px;width:856px;height:16px;text-align:center;z-index:62;">
+<font style="font-size:11px;" color="#000000" face="Arial">
+|  <a href="xahoi.html">Xã hội</a>  &nbsp;|  <a href="">Thế giới</a>  &nbsp;|  <a href="">Kinh doanh</a>  &nbsp;|  <a href="">Văn hóa</a>  &nbsp;|  <a href="">Thể thao</a>  &nbsp;|  <a href="">Pháp luật</a>  &nbsp;|  <a href="">Đời sống</a>  &nbsp;|  <a href="">Khoa học</a>  &nbsp;|  <a href="">Vi tính</a>  &nbsp;|  <a href="">Ôtô - Xe máy</a>  &nbsp;|  <a href="">Bạn đọc viết</a>  &nbsp;|  <a href="">Tâm sự</a>  &nbsp;|  <a href="">Rao vặt</a>  &nbsp;|  <a href="">Cười</a>  </font></div>
+</div>
+<table style="position:absolute;left:103px;top:2743px;width:1048px;height:39px;z-index:121;" cellpadding="0" cellspacing="1" id="Table32">
+<tr>
+<td align="left" valign="top" style="height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </font><font style="font-size:11px" color="#C3C3C3" face="Arial"> </font><font style="font-size:11px" color="#969696" face="Arial">� Copyright 2010-2012 BaoDienTu.com, All right reserved Contact us - Thông tin tòa soạn</font></td>
+</tr>
+<tr>
+<td align="left" valign="top" style="height:18px;">
+<font style="font-size:11px" color="#000000" face="Arial">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </font><font style="font-size:11px" color="#969696" face="Arial"> � BaoDienTu giữ bản quyền nội dung trên website này</font></td>
+</tr>
+</table>
+<div id="wb_TabMenu4" style="margin:0;padding:0;position:absolute;left:99px;top:1056px;width:584px;height:32px;text-align:left;z-index:122;">
+<div id="TabMenu4">
+<ul>
+<li><a href="#"><span>Văn hóa</span></a></li>
+<li><a href="#"><span>Hoa hậu</span></a></li>
+<li><a href="#"><span>Nghệ sĩ</span></a></li>
+<li><a href="#"><span>Âm nhạc</span></a></li>
+<li><a href="#"><span>Thời trang</span></a></li>
+<li><a href="#"><span>Điện ảnh</span></a></li>
+<li><a href="#"><span>Mỹ thuật</span></a></li>
+<li><a href="#"><span>Văn học</span></a></li>
+</ul>
+</div></div>
+</body>
+</html>
