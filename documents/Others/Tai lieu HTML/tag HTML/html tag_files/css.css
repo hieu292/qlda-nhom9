@@ -1,0 +1,44 @@
+#lsa_window {
+    width: 600px;
+}
+
+#lsadd {
+    cursor: move;
+}
+
+#lsa_results {
+    height: 250px; 
+    overflow: auto;
+}
+
+#collapse_lsa_ext {
+    position: static; 
+    margin-top: 2px;
+}
+
+.lsab {
+    border-bottom:1px solid #C4C4C4;
+    border-left:1px solid #C4C4C4;
+    border-right:1px solid #C4C4C4;
+}
+
+#lsa_results ol {
+    padding-top: 2px;
+    border-top: 1px solid #C4C4C4;
+}
+
+#lsa_results li, #lsform li {
+    margin-top: 2px;
+}
+
+#lsa_results ol li > span, .lsar {
+    float: right;
+}
+
+#lsa_results ol li > span a {
+    color: #666666;
+}
+
+#lsform .blockbody.formcontrols {
+    border: none;
+} 

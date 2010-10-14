@@ -1,0 +1,63 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head><body><br>
+<b>Warning</b>:  file_put_contents(/home/em_sdelivery/web/v3/emnsv_invite.php.log) [<a href="http://survey-b.effectivemeasure.net/v3/function.file-put-contents">function.file-put-contents</a>]: failed to open stream: Permission denied in <b>/home/em_sdelivery/class_v3/Logger.class.php</b> on line <b>27</b><br>
+
+
+ 
+<script type="text/javascript">
+           function startSurvey(){
+               var target = 'emnsv.php?test=0&id=1.1&ids=4_509_509_0_292_1_61_6_375493%7C4_506_506_0_298_1_61_6_375493%7C4_505_505_0_300_1_61_6_375493%7C4_507_507_0_534_1_61_6_375493%7C4_0_0_0_540_1_61_6_375493%7C4_501_501_0_1531_1_61_1_375493%7C4_506_506_0_1532_1_61_1_375493&domain=free4vn.org&langId=1&ns=_emn&version=v3&ff=1&host=http%3A%2F%2Fsurvey-b.effectivemeasure.net&cdnHost=http%3A%2F%2Fsurvey-cdn.effectivemeasure.net';
+               var mywindow = window.open( target,'mywindow','width=700,height=620,toolbar=0,location=0,directories=0,location=0,toolbar=0,status=0,menubar=0,scrollbars=0,copyhistory=0,resizable=1');            
+               document.getElementById('rejectBtn').disabled=true;
+               document.getElementById('startBtn').disabled=true;
+           }                
+           
+           var temp;
+           var rejectTemp;
+           function rejectSurvey(){
+               temp= new Image();
+               temp.src = "http://ads.admaxasia.com/servlet/cookie?action=set&name=survey&value=1&maxage=2592000";
+
+               
+               document.getElementById('rejectBtn').disabled=true;
+               document.getElementById('startBtn').disabled=true;
+           }     
+           
+        </script>
+<style type="text/css">
+html,body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+img#bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.content {
+	position: absolute;
+	z-index: 1;
+}
+
+#startBtn {
+	left: 20;
+	top: 110;
+}
+
+#rejectBtn {
+    left: 60;
+    top: 110;
+}
+</style>
+
+<img src="emnsv_invite_data/1251352903969_300x250_eng.gif" alt="" id="bg">
+ 
+<input id="startBtn" class="content" value="Yes" onclick="startSurvey()" type="button">
+<input id="rejectBtn" class="content" value="No" onclick="rejectSurvey()" type="button">
+</body></html>
