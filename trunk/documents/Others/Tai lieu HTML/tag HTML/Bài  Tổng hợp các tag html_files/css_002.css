@@ -1,0 +1,157 @@
+/* Post Notes developed by pdtan */
+.uiUfiComment a
+{
+	color: #3b5998;
+	cursor: pointer;
+	text-decoration: none;
+	-moz-outline-style: none;
+}
+.uiUfiComment img
+{
+	border-bottom: 0px;
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+}
+.uiUfi, .uiUfi ul
+{
+	padding-bottom: 0px;
+	list-style-type: none;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+}
+.uiUfiComment abbr
+{
+	border-bottom: medium none;
+}
+
+.uiUfiComment .clearfix:after
+{
+	line-height: 0;
+	display: block;
+	height: 0px;
+	visibility: hidden;
+	clear: both;
+	font-size: 0px;
+	content: ".";
+}
+.uiUfiComment .clearfix
+{
+	zoom: 1;
+	display: block;
+}
+
+.UIImageBlock_Content
+{
+	width: 1000px;
+	display: table-cell;
+	vertical-align: top;
+	_display: block;
+}
+.UIImageBlock_Image
+{
+	float: left;
+	margin-right: 5px;
+}
+.UIImageBlock_Image .img
+{
+	display: block;
+}
+.UIImageBlock_SMALL_Image
+{
+	margin-right: 8px;
+}
+.uiListItem
+{
+	display: block;
+}
+.uiListLight
+{
+	border-bottom-style: solid;
+	border-right-style: solid;
+	border-top-style: solid;
+	border-left-style: solid;
+}
+.uiListVerticalItemBorder
+{
+	border-right-width: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+}
+.uiListItem:first-child
+{
+	border-bottom: 0px;
+	border-left: 0px;
+	border-top: 0px;
+	border-right: 0px;
+}
+.uiListLight
+{
+	border-bottom-color: #e9e9e9;
+	border-top-color: #e9e9e9;
+	border-right-color: #e9e9e9;
+	border-left-color: #e9e9e9;
+}
+
+.uiTextSubtitle
+{
+	color: #808080;
+	font-size: 11px;
+	line-height: 14px;	
+}
+.uiProfilePhotoMedium
+{
+	width: 32px;
+	height: 32px;
+}
+.uiUfi
+{
+	text-align: left;
+	unicode-bidi: embed;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	width: 405px;
+	padding-top: 2px;
+}
+.uiUfi .ufiItem
+{
+	border-bottom: #e5eaf1 1px solid;
+	padding-bottom: 4px;
+	background-color: #edeff4;
+	margin-top: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
+}
+.viewall
+{
+	width: 403px;
+	background-color: #edeff4;
+	margin-bottom: -2px;
+	padding: 1px;
+}
+.uiUfiComment .commentContent
+{
+	padding-top: 1px;
+}
+.uiUfiComment .actorName
+{
+	font-weight: bold;
+}
+.uiUfiComment .commentActions
+{
+	padding-top: 3px;
+}
+.r_comment_ok{
+color:#009800;
+}
+.r_comment_notok{
+color:red;
+}
+.r_comment_time{
+font-size:8pt;
+color:#666666;
+} 
