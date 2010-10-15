@@ -1,0 +1,3 @@
+t xài wamp
+nho attach database trong thu muc kncsdl do
+con store procedure tui dua len sau 
