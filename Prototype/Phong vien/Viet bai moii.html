@@ -6,15 +6,17 @@
 </head>
 
 <body>
-<img src="img0001.jpg" width="994" height="103" />
-<table width="98%" border="0">
+<table width="990" border="0" align="center">
+  <tr>
+    <td colspan="3"><img src="img0001.jpg" width="994" height="103" /></td>
+  </tr>
   <tr>
     <td colspan="3"><h2><em>Bài viết</em></h2></td>
   </tr>
   <tr>
-    <td width="14%">&nbsp;</td>
-    <td width="71%"><h3><em>Viết bài mới</em></h3></td>
-    <td width="15%">&nbsp;</td>
+    <td width="137">&nbsp;</td>
+    <td width="698"><h3><em>Viết bài mới</em></h3></td>
+    <td width="151">&nbsp;</td>
   </tr>
   <tr>
     <td valign="top"><p><strong>Gởi bài mới</strong></p>
@@ -26,37 +28,33 @@
           <input name="tieude" type="text" id="tieude" size="80" />
 
     <p><strong><em>Chèn vào</em></strong>: Hình ảnh | Âm thanh | Video</p>
-    <p><img src="toolbar.JPG" width="708" height="58" />
-        <textarea name="skfj" id="skfj" cols="80" rows="40"></textarea>
+    <p><img src="toolbar.JPG" width="666" height="58" />
+        <textarea name="skfj" id="skfj" cols="80" rows="15"></textarea>
 </p>
     <p><strong><em>Tóm tắt:</em></strong><br />
-        <textarea name="sdfs" id="sdfs" cols="80" rows="5"></textarea>
-</p>
-    <p><strong><em>Thảo luận:</em></strong></p>
-      <p>
-        <label>
-          <input type="checkbox" name="checkbox" id="checkbox" />
-          Cho phép thảo luận trên bài báo này</label>
-      </p>
-      <p><strong><em>Chuyên mục</em>:</strong> (chỉ hiện thị những chuyên mục được phép đăng bài)</p>
+      <textarea name="sdfs" id="sdfs" cols="80" rows="5"></textarea>
+    </p>
+    <p>&nbsp;</p>
+      <p>&nbsp;</p></td>
+    <td width="151" valign="top"><p><strong><em>Chuyên mục</em>:</strong> (chỉ hiện thị những chuyên mục được phép đăng bài)</p>
       <form id="form1" name="form1" method="post" action="">
         <p>
           <label>
-            <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_0" />
+          <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_0" />
             Xã hội</label>
           <br />
           <label>
-            <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_1" />
+          <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_1" />
             Thế giới</label>
           <br />
           <label>
-            <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_2" />
+          <input type="radio" name="RadioGroup1" value="radio" id="RadioGroup1_2" />
             Vi Tinh</label>
           <br />
         </p>
       </form>
-    <p>&nbsp;</p></td>
-    <td valign="top"><p>Tình trạng bài viết:</p>
+      <p>&nbsp;</p>
+      <p><strong>Tình trạng bài viết:</strong></p>
       <form id="form2" name="form2" method="post" action="">
         <p>
           <label>
@@ -75,11 +73,15 @@
       </form>
       <form id="form3" name="form3" method="post" action="">
         <label>
-          <input type="submit" name="button" id="button" value="Đăng bài" />
-          <input type="hidden" name="hiddenField" id="hiddenField" />
+          <div align="center">
+            <input name="button" type="submit" id="button" value="Gởi bài" />
+            <input type="hidden" name="hiddenField" id="hiddenField" />
+            </div>
         </label>
         <label>
-          <input type="submit" name="button2" id="button2" value="Xem trước" />
+          <div align="center">
+            <input type="submit" name="button2" id="button2" value="Xem trước" />
+            </div>
         </label>
       </form>
     <p>&nbsp;</p></td>
