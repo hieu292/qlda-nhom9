@@ -1,0 +1,502 @@
+DELIMITER ;;
+Create procedure ThemChuyenMuc(In MaLV smallint, in TENCM char(50), in MOTA varchar(200))
+Begin
+	insert into CHUYENMUC(MaLV,TENCM,MOTA) values (MaLV,TENCM,MOTA);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemLinhVuc(in TENLV char(50), in MOTA varchar(200))
+Begin
+	insert into LINHVUC(TENLV,MOTA) values (TENLV,MOTA);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemPhienBan(In MATIN int, in SOPHIENBAN smallint, in TOMTAT longtext,in NOIDUNG longtext,in GHICHU longtext, in GOPY longtext)
+Begin
+	insert into PhienBan values (MATIN,SOPHIENBAN,TOMTAT,NOIDUNG,GHICHU,GOPY);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemQuangCao(in MAVT smallint, in USERNAME char(50), in URLHINH longtext, in NGAYBATDAU date, in NGAYKETTHUC date, in SOTIEN, decimal(8,2))
+Begin
+	declare maqc int;
+	insert into QuangCao(USERNAME,URLHINH,NGAYBATDAU,NGAYKETTHUC,SOTIEN) values (USERNAME,URLHINH,NGAYBATDAU,NGAYKETTHUC,SOTIEN);
+	set maqc=(select max(MAQC) from QuangCao );
+	insert into ViTriDang values (maqc,MAVT);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemSuKien(in MOTA varchar(200))
+Begin
+	insert into SuKien(MOTA) values (MOTA);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemThongKeQuangCao(in MAQC int, in NGAYGIO datetime, in SOLANCLICK int )
+Begin
+	insert into ThongKeQuangCao values (MAQC,NGAYGIO,SOLANCLICK);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure CapNhatThongKeQuangCao(in MAQC int, in NGAYGIO datetime)
+Begin
+	declare solanclick int;
+	set solanclick=(select SOLANCLICK from ThongKeQuangCao where MAQC=MAQC and NGAYGIO=NGAYGIO);
+	set solanclick=solanclick+1;
+	update ThongKeQuangCao set SOLANCLICK=solanclick where MAQC=MAQC and NGAYGIO=NGAYGIO ;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemThongKeTin(in MATIN int, in NGAYGIO datetime, in SOLANXEM int)
+Begin
+	insert into ThongKeTin values (MATIN,NGAYGIO,SOLANXEM);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure CapNhatThongKeTin(in MATIN int, in NGAYGIO datetime)
+Begin
+	declare solanxem int;
+	set solanxem=(select SOLANXEM from ThongKeTin where MATIN=MATIN and NGAYGIO=NGAYGIO);
+	set solanxem=solanxem+1;
+	update ThongKeTin set SOLANXEM=solanxem where MATIN=MATIN and NGAYGIO=NGAYGIO ;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemTin(in IDSK int, in USERNAME char(50), in MACM smallint, in TIEUDE char(100), in PHIENBAN smallint, in COMMENT smallint)
+Begin
+	declare NGAYDANG date;
+	set NGAYDANG = now();	
+	insert into Tin(IDSK,USERNAME,MACM,TIEUDE,NGAYDANG,PHIENBAN,COMMENT) values (IDSK,USERNAME,MACM,TIEUDE,NGAYDANG,PHIENBAN,COMMENT);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure LayTin( in MATIN int, out MOTA varchar(200), out TIEUDE char(100), out NGAYDANG datetime, out TOMTAT longtext, out NOIDUNG longtext)
+Begin
+	declare mota varchar(200), tieude char(100), ngaydang datetime,tomtat longtext,noidung longtext;
+	select MOTA,TIEUDE,NGAYDANG,TOMTAT,NOIDUNG
+	into mota,tieude,ngaydang,tomtat,noidung
+	from TIN,PHIENBAN,SUKIEN
+	where PhienBan.MATIN=Tin.MATIN
+	and Tin.IDSK=SUKIEN.IDSK
+	and Tin.MATIN=MATIN;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure CapNhatPhienBanTin(in MATIN int, in TIEUDE char(100), in PHIENBAN smallint)
+Begin
+	update Tin set TIEUDE = TIEUDE,PHIENBAN=PHIENBAN where MATIN=MATIN;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure CapNhatCommentTin(in MATIN int)
+Begin
+	declare comment smallint;
+	set comment = (select COMMENT from Tin where MATIN=MATIN);
+	set comment=comment+1;
+	update Tin set COMMENT=comment where MATIN=MATIN;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemTinHot(in NGAYBATDAU datetime, in NGAYKETTHUC datetime, in MATIN int)
+Begin
+	insert into TinHot values(NGAYBATDAU,NGAYKETTHUC,MATIN);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure LayTinHot( out MOTA varchar(200), out TIEUDE char(100), out NGAYDANG datetime, out TOMTAT longtext, out NOIDUNG longtext)
+Begin
+	declare mota varchar(200), tieude char(100), ngaydang datetime,tomtat longtext,noidung longtext;
+	select MOTA,TIEUDE,NGAYDANG,TOMTAT,NOIDUNG
+	into mota,tieude,ngaydang,tomtat,noidung
+	from TINHOT,TIN,PHIENBAN,SUKIEN
+	where TinHot.MATIN=Tin.MATIN 
+	and Tin.IDSK=SUKIEN.IDSK
+	and TinHot.NGAYBATDAU <= now() and now()<=TinHot.NGAYKETTHUC
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemUser(in USERNAME char(50), in MAVT smallint, in PASS char(20), in HOTEN char(50), in GIOITINH smallint, in NGAYSINH date, in DIACHI text, in EMAIL char(255), in SDT char(20), in CMND char(10))
+Begin,
+	insert into User values (USERNAME,MAVT,PASS,HOTEN,GIOITINH,NGAYSINH,DIACHI,EMAIL,SDT,CMND);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure CapNhatUser(in USERNAME char(50), in MAVT smallint, in PASS char(20), in HOTEN char(50), in GIOITINH smallint, in NGAYSINH date, in DIACHI text, in EMAIL char(255), in SDT char(20), in CMND char(10))
+Begin,
+	Update User set MAVT=MAVT,PASS=PASS,HOTEN=HOTEN,GIOITINH=GIOITINH,NGAYSINH=NGAYSINH,DIACHI=DIACHI,EMAIL=EMAIL,SDT=SDT,CMND=CMND where USERNAME=SUERNAME;
+End
+DELIMITER ;
+Create procedure ThemUserChuyenMuc(in MACM smallint,in USERNAME char(50))
+Begin
+	insert into UserChuyenMuc values (MACM,USERNAME);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemVaiTro(in TENVT char(100), in MOTA varchar(200))
+Begin
+	insert into VaiTro(TENVT,MOTA) values (TENVT,MOTA);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemViTri(in TEN char(50))
+Begin
+	insert into ViTri(TEN) values (TEN);
+End
+DELIMITER ;
+Create procedure ThemViTriDang(in MAQC int, in MAVT smallint)
+Begin
+	insert into ViTriDang values (MAQC,MAVT);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemYKienBanDoc(in MATIN int, in NOIDUNG longtext, in TENNGUOIDUNG char(50), in EMAIL char(50), in NGAYGUI datetime, in DUOCDANG smallint)
+Begin
+	insert into YKienBanDoc(MATIN,NOIDUNG,TENNGUOIDUNG,EMAIL,NGAYGUI,DUOCDANG) values (MATIN,NOIDUNG,TENNGUOIDUNG,EMAIL,NGAYGUI,DUOCDANG);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure DoiMatKhau(in USERNAME	char(50), in PASS char(20))
+Begin
+	update User set PASS=PASS where USERNAME=USERNAME;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure XoaYKienBanDoc(in MAYKIEN int)
+Begin
+	delete from User where MAYKIEN=MAYKIEN;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure LayDanhSachTaiKhoan(in SAPXEP char(20), inout TENVAITRO char(100),out TAIKHOAN char(50),out TENNGUOIDUNG char(50))
+Begin
+	if SAPXEP='Tai khoan' then  
+		select USERNAME, HOTEN,TENVT 
+		into TAIKHOAN,TENNGUOIDUNG,TENVAITRO
+		from USER,VAITRO
+		where USER.MAVT=VaiTro.MAVT 
+		and VaiTro.TENVT=TENVAITRO 
+		order by USERNAME ASC;
+	else
+		select USERNAME, HOTEN,TENVT 
+		into TAIKHOAN,TENNGUOIDUNG,TENVAITRO
+		from USER,VAITRO
+		where USER.MAVT=VaiTro.MAVT 
+		and VaiTro.TENVT=TENVAITRO 
+		order by HOTEN ASC;
+	End if;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThongKeBaiVietPhongVien(in USERNAME char(50), in TUNGAY datetime, in DENNGAY datetime, out TIEUDEBAIVIET char(100), out LUOTXEM int, out COMMENT smallint)
+Begin
+	select TIEUDE,SOLANXEM,COMMENT 
+	into TIEUDEBAIVIET,LUOTXEM,COMMENT 
+	from Tin,ThongKeTin 
+	where Tin.MATIN=ThongKeTin.MATIN 
+	and Tin.USERNAME=USERNAME 
+	and Tin.NGAYDANG Between TUNGAY and DENNGAY;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure TimTaiKhoan(in TUKHOA char(50),in TIMTHEO char(50),out TAIKHOAN char(50),out TENNGUOIDUNG char(50),out TENVAITRO)
+Begin
+	if TIMTHEO='Tai khoan' then  
+		select USERNAME, HOTEN,TENVT 
+		into TAIKHOAN,TENNGUOIDUNG,TENVAITRO
+		from USER,VAITRO
+		where USER.MAVT=VaiTro.MAVT
+		and User.USERNAME like %TUKHOA%
+		order by USERNAME ASC;
+	else 	
+		select USERNAME, HOTEN,TENVT 
+		into TAIKHOAN,TENNGUOIDUNG,TENVAITRO
+		from USER,VAITRO
+		where USER.MAVT=VaiTro.MAVT 
+		and User.HOTEN like %TUKHOA% 
+		order by HOTEN ASC;
+	End if;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ThemViTri(in TEN char(50))
+Begin
+	insert into ViTri(TEN) values (TEN);
+End
+DELIMITER ;
+
+/// trang admin_qlqc.html
+
+DELIMITER ;;
+//sai Create procedure LayLichDang(in MAVT smallint, in THANG smallint,in NAM smallint,out NGAYBATDAU date,out NGAYKETTHUC date)
+Begin
+	select NGAYBATDAU,NGAYKETTHUC 
+	into NGAYBATDAU,NGAYKETTHUC
+	from ViTri,QuangCao,ViTriDang
+	where ViTri.MAVT=ViTriDang.MAVT 
+	and QuangCao.MAQC=ViTriDang.MAQC
+	and (month(QuangCao.NGAYBATDAU)=THANG or month(QuangCao.NGAYBATDAU)=THANG-1);
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure LayDanhSachQuangCao( in SAPXEP char(20), in HIENTHI char(20),in VITRI smallint, out MASO, out TENKHACHHANG,out NGAYDANG,out NGAYHETHAN,out VITRI,out TRANGTHAI)
+Begin
+	if SAPXEP='MA SO' then
+		if HIENTHI='CHUA DANG' then
+			select QuangCao.MAQC,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+			into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+			from ViTri,QuangCao,ViTriDang,User 
+			where ViTri.MAVT=ViTriDang.MAVT 
+			and QuangCao.MAQC=ViTriDang.MAQC 
+			and QuangCao.USERNAME=User.USERNAME
+			and ViTri.MAVT=VITRI
+			and QuangCao.NGAYBATDAU > now()
+			order by QuangCao.MAQC ASC;
+		else if HIENTHI='DA DANG' then
+				select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+				into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+				from ViTri,QuangCao,ViTriDang,User 
+				where ViTri.MAVT=ViTriDang.MAVT 
+				and QuangCao.MAQC=ViTriDang.MAQC 
+				and QuangCao.USERNAME=User.USERNAME
+				and ViTri.MAVT=VITRI
+				and QuangCao.NGAYBATDAU <= now()
+				and QuangCao.NGAYKETTHUC >= now()
+				order by QuangCao.MAQC ASC;
+			else if HIENTHI='HET HAN' then
+					select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+					into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+					from ViTri,QuangCao,ViTriDang,User 
+					where ViTri.MAVT=ViTriDang.MAVT 
+					and QuangCao.MAQC=ViTriDang.MAQC 
+					and QuangCao.USERNAME=User.USERNAME
+					and ViTri.MAVT=VITRI
+					and QuangCao.NGAYKETTHUC < now()
+					order by QuangCao.MAQC ASC;
+				else 
+					select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+					into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+					from ViTri,QuangCao,ViTriDang,User 
+					where ViTri.MAVT=ViTriDang.MAVT 
+					and QuangCao.MAQC=ViTriDang.MAQC 
+					and QuangCao.USERNAME=User.USERNAME
+					and ViTri.MAVT=VITRI
+					order by QuangCao.MAQC ASC;
+				end if;
+			end if;
+		end if;
+	else if SAPXEP='TEN KH' then
+			if HIENTHI='CHUA DANG' then
+				select QuangCao.MAQC,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+				into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+				from ViTri,QuangCao,ViTriDang,User 
+				where ViTri.MAVT=ViTriDang.MAVT 
+				and QuangCao.MAQC=ViTriDang.MAQC 
+				and QuangCao.USERNAME=User.USERNAME
+				and ViTri.MAVT=VITRI
+				and QuangCao.NGAYBATDAU > now()
+				order by User.HOTEN ASC;
+			else if HIENTHI='DA DANG' then
+					select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+					into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+					from ViTri,QuangCao,ViTriDang,User 
+					where ViTri.MAVT=ViTriDang.MAVT 
+					and QuangCao.MAQC=ViTriDang.MAQC 
+					and QuangCao.USERNAME=User.USERNAME
+					and ViTri.MAVT=VITRI
+					and QuangCao.NGAYBATDAU <= now()
+					and QuangCao.NGAYKETTHUC >= now()
+					order by User.HOTEN ASC;
+				else if HIENTHI='HET HAN' then
+						select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+						into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+						from ViTri,QuangCao,ViTriDang,User 
+						where ViTri.MAVT=ViTriDang.MAVT 
+						and QuangCao.MAQC=ViTriDang.MAQC 
+						and QuangCao.USERNAME=User.USERNAME
+						and ViTri.MAVT=VITRI
+						and QuangCao.NGAYKETTHUC < now()
+						order by User.HOTEN ASC;
+					else 
+						select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+						into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+						from ViTri,QuangCao,ViTriDang,User 
+						where ViTri.MAVT=ViTriDang.MAVT 
+						and QuangCao.MAQC=ViTriDang.MAQC 
+						and QuangCao.USERNAME=User.USERNAME
+						and ViTri.MAVT=VITRI
+						order by User.HOTEN ASC;
+					end if;
+				end if;
+			end if;
+		else if SAPXEP='NGAY DANG' then
+				if HIENTHI='CHUA DANG' then
+					select QuangCao.MAQC,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+					into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+					from ViTri,QuangCao,ViTriDang,User 
+					where ViTri.MAVT=ViTriDang.MAVT 
+					and QuangCao.MAQC=ViTriDang.MAQC 
+					and QuangCao.USERNAME=User.USERNAME
+					and ViTri.MAVT=VITRI
+					and QuangCao.NGAYBATDAU > now()
+					order by QuangCao.NGAYBATDAU ASC;
+				else if HIENTHI='DA DANG' then
+						select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+						into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+						from ViTri,QuangCao,ViTriDang,User 
+						where ViTri.MAVT=ViTriDang.MAVT 
+						and QuangCao.MAQC=ViTriDang.MAQC 
+						and QuangCao.USERNAME=User.USERNAME
+						and ViTri.MAVT=VITRI
+						and QuangCao.NGAYBATDAU <= now()
+						and QuangCao.NGAYKETTHUC >= now()
+						order by QuangCao.NGAYBATDAU ASC;
+					else if HIENTHI='HET HAN' then
+							select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+							into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+							from ViTri,QuangCao,ViTriDang,User 
+							where ViTri.MAVT=ViTriDang.MAVT 
+							and QuangCao.MAQC=ViTriDang.MAQC 
+							and QuangCao.USERNAME=User.USERNAME
+							and ViTri.MAVT=VITRI
+							and QuangCao.NGAYKETTHUC < now()
+							order by QuangCao.NGAYBATDAU ASC;
+						else 
+							select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+							into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+							from ViTri,QuangCao,ViTriDang,User 
+							where ViTri.MAVT=ViTriDang.MAVT 
+							and QuangCao.MAQC=ViTriDang.MAQC 
+							and QuangCao.USERNAME=User.USERNAME
+							and ViTri.MAVT=VITRI
+							order by QuangCao.NGAYBATDAU ASC;
+						end if;
+					end if;
+				end if;
+			else
+				if HIENTHI='CHUA DANG' then
+					select QuangCao.MAQC,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+					into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+					from ViTri,QuangCao,ViTriDang,User 
+					where ViTri.MAVT=ViTriDang.MAVT 
+					and QuangCao.MAQC=ViTriDang.MAQC 
+					and QuangCao.USERNAME=User.USERNAME
+					and ViTri.MAVT=VITRI
+					and QuangCao.NGAYBATDAU > now()
+					order by QuangCao.NGAYKETTHUC ASC;
+				else if HIENTHI='DA DANG' then
+						select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+						into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+						from ViTri,QuangCao,ViTriDang,User 
+						where ViTri.MAVT=ViTriDang.MAVT 
+						and QuangCao.MAQC=ViTriDang.MAQC 
+						and QuangCao.USERNAME=User.USERNAME
+						and ViTri.MAVT=VITRI
+						and QuangCao.NGAYBATDAU <= now()
+						and QuangCao.NGAYKETTHUC >= now()
+						order by QuangCao.NGAYKETTHUC ASC;
+					else if HIENTHI='HET HAN' then
+							select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+							into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+							from ViTri,QuangCao,ViTriDang,User 
+							where ViTri.MAVT=ViTriDang.MAVT 
+							and QuangCao.MAQC=ViTriDang.MAQC 
+							and QuangCao.USERNAME=User.USERNAME
+							and ViTri.MAVT=VITRI
+							and QuangCao.NGAYKETTHUC < now()
+							order by QuangCao.NGAYKETTHUC ASC;
+						else 
+							select MASO,USER.HOTEN,NGAYBATDAU,NGAYKETTHUC,VITRI.TEN 
+							into MASO,TENKHACHHANG,NGAYDANG,NGAYHETHAN,VITRI
+							from ViTri,QuangCao,ViTriDang,User 
+							where ViTri.MAVT=ViTriDang.MAVT 
+							and QuangCao.MAQC=ViTriDang.MAQC 
+							and QuangCao.USERNAME=User.USERNAME
+							and ViTri.MAVT=VITRI
+							order by QuangCao.NGAYKETTHUC ASC;
+						end if;
+					end if;
+				end if;
+			end if;
+		end if;
+	end if;			
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure CapNhatQuangCao(in MAQC int, in MAVT smallint, in USERNAME char(50), in URLHINH longtext, in NGAYBATDAU date, in NGAYKETTHUC date, in SOTIEN, decimal(8,2))
+Begin
+	update QuangCao set USERNAME=USERNAME,URLHINH=URLHINH,NGAYBATDAU=NGAYBATDAU,NGAYKETTHUC=NGAYKETTHUC,SOTIEN=SOTIEN WHERE MAQC=MAQC;
+	update ViTriDang set MAVT=MAVT where MAQC=MAQC;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure LayThongTinQuangCao(in MAQC int,in XEMTUNGAY date, in XEMDENNGAY date, out TENKHACHHANG char(50), out VITRIDANG smallint,out NGAYDANG date, out NGAYHETHAN date,out CHIPHI decimal(8,2),out LUOTXEM int)
+Begin
+	select Username.HOTEN, ViTriDang.MAVT,QuangCao.NGAYBATDAU,QuangCao.NGAYKETTHUC,SOTIEN,sum(SOLANCLICK)
+	into TENKHACHHANG,VITRIDANG,NGAYDANG,NGAYHETHAN,CHIPHI,LUOTXEM
+	from QuangCao,ViTriDang,ThongKeQuangCao
+	where QuangCao.MAQC=ViTriDang.MAQC
+	and ThongKeQuangCao.MAQC=QuangCao.MAQC
+	and QuangCao.MAQC=MAQC 
+	and date(ThongKeQuangCao.NGAYGIO)>=XEMTUNGAY
+	and date(ThongKeQuangCao.NGAYGIO)<=XEMDENNGAY;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure LayThongTinKhachHang( in USERNAME char(50), out HOTEN char(50), out EMAIL char(255),out SDT char(20), out SOQUANGCAODADANG int,out LUOTXEMDADANG int, out SOQUANGCAODANGDANG int,out LUOTXEMDANGDANG int, out SOQUANGCAOCHUADANG int, out MAQC int, out VITRI smallint, out NGAYDANG date, out NGAYHETHAN date)
+Begin
+	select Username.HOTEN,EMAIL,SDT,count(QuangCao.MAQC),QuangCao.MAQC,ViTriDang.MAVT,NGAYBATDAU,NGAYKETTHUC,sum(SOLANCLICK)
+	into HOTEN,EMAIL,SDT,SOQUANGCAODADANG,MAQC,VITRI,NGAYDANG,NGAYHETHAN,LUOTXEMDADANG
+	from ThongKeQuangCao,QuangCao,User
+	where ThongKeQuangCao.MAQC=QuangCao.MAQC
+	and User.USERNAME=QuangCao.USERNAME
+	and QuangCao.USERNAME=USERNAME
+	and date(QuangCao.NGAYHETHAN)<date(now());
+	
+	select count(QuangCao.MAQC),sum(SOLANCLICK)
+	into SOQUANGCAODANGDANG,LUOTXEMDANGDANG
+	from ThongKeQuangCao,QuangCao,User
+	where ThongKeQuangCao.MAQC=QuangCao.MAQC
+	and User.USERNAME=QuangCao.USERNAME
+	and QuangCao.USERNAME=USERNAME
+	and date(QuangCao.NGAYBATDAU)<=date(now())
+	and date(QuangCao.NGAYHETHAN)>=date(now());
+	
+	select count(QuangCao.MAQC),sum(SOLANCLICK)
+	into SOQUANGCAOCHUADANG
+	from ThongKeQuangCao,QuangCao,User
+	where ThongKeQuangCao.MAQC=QuangCao.MAQC
+	and User.USERNAME=QuangCao.USERNAME
+	and QuangCao.USERNAME=USERNAME
+	and date(QuangCao.NGAYBATDAU)>=date(now());
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ()
+Begin
+	;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ()
+Begin
+	;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ()
+Begin
+	;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ()
+Begin
+	;
+End
+DELIMITER ;
+DELIMITER ;;
+Create procedure ()
+Begin
+	;
+End
+DELIMITER ;
